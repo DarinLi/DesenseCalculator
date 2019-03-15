@@ -1,0 +1,330 @@
+/***********Qt CustomStytle ************/
+
+/**********Main Widget Stytle**********/
+QWidget#MainWidgetUI {
+	background: rgb(240, 241, 245);
+}
+
+/**********About Widget Stytle**********/
+QWidget#AboutWidgetUI {
+	background: rgb(240, 241, 245);
+}
+
+/**********TitleBar Stytle**********/
+QWidget#titlebar {
+	background: rgb(57, 197, 187);
+}
+
+/**********TitleBar Label Stytle**********/
+QLabel#titlelabel {
+	color: white;
+	/*qproperty-text: "Simple Frameless Window Demo";*/
+}
+
+/**********按钮**********/
+QToolButton#minbutton,QToolButton#menubutton {
+	color:lightgray;
+	background-color:transparent;
+}
+QToolButton#closebutton {
+	color:lightgray;
+	background-color:transparent;
+}
+QToolButton#minbutton:hover,QToolButton#menubutton:hover,QToolButton#closebutton:hover{
+    color:white;
+}
+QToolButton#minbutton:hover,QToolButton#menubutton:pressed,QToolButton#closebutton:pressed{
+    color:white;
+}
+
+QToolButton#menubutton {
+	color:lightgray;
+	background-color:transparent;
+}
+QToolButton#menubutton:hover{
+    color:white;
+}
+QToolButton#menubutton:pressed{
+    color:white;
+}
+QToolButton#menubutton::menu-indicator {
+    image: none;
+}
+
+/**********按钮**********/
+QPushButton{
+    border-radius: 4px;
+    border: none;
+}
+QPushButton:enabled {
+    background: rgb(57, 197, 187);
+    color: white;
+}
+QPushButton:!enabled {
+    background: rgb(180, 180, 180);
+    color: white;
+}
+QPushButton:enabled:hover{
+    background: rgb(45, 175, 165);
+}
+QPushButton:enabled:pressed{
+    background: rgb(30, 160, 150);
+}
+
+/**********标签**********/
+QLabel {
+        color: rgb(2, 65, 132);
+}
+
+QLabel#titlenameLabel {
+        font: bold;
+}
+
+QLabel#Screen_Bits_Value,QLabel#Vmipi_CLK_Value {
+        color: rgb(0, 85, 255);
+        font: bold;
+}
+
+/**********菜单***********/
+QMenu {
+    /*font: Normal;*/
+    /*border: 1px solid rgb(100, 100, 100);*/
+	border: 1px solid transparent;
+    background: rgb(240, 241, 245);
+}
+QMenu::item {
+    height: 22px;
+    padding: 2px 20px 2px 25px;
+}
+QMenu::item:enabled {
+    color: rgb(33, 33, 33);
+}
+QMenu::item:!enabled {
+    color: rgb(155, 155, 155);
+}
+QMenu::item:enabled:selected {
+    color: black;
+    background: rgba(100, 220, 220, 90);
+}
+QMenu::separator {
+    height: 1px;
+    background: rgb(57, 197, 187);
+}
+QMenu::indicator {
+    width: 13px;
+    height: 13px;
+}
+QMenu::icon {
+    padding-left: 1px;
+    padding-right: 1px;
+}
+
+/**********分组框**********/
+QGroupBox {
+    font-size: 13px;
+    border: 1px solid rgb(57, 197, 187);
+    border-radius: 4px;
+    margin-top: 8px; /* leave space at the top for the title */
+	background: rgb(245, 250, 255);
+}
+QGroupBox::title {
+    color: rgb(56, 99, 154);
+    top: -8px;
+    left: 10px;
+}
+
+/**********复选框**********/
+QCheckBox{
+    spacing: 5px;
+}
+QCheckBox:enabled{
+	color: rgb(2, 65, 132);
+}
+QCheckBox:enabled:hover{
+	color: rgb(0, 78, 161);
+}
+QCheckBox:!enabled{
+	color: rgb(80, 80, 80);
+}
+QCheckBox::indicator {
+    width: 14px;
+    height: 14px;
+}
+QCheckBox::indicator:unchecked {
+    image: url(./theme/White/checkBox.png);
+}
+QCheckBox::indicator:unchecked:hover {
+    image: url(./theme/White/checkBoxHover.png);
+}
+QCheckBox::indicator:unchecked:pressed {
+	image: url(./theme/White/checkBoxPressed.png);
+}
+QCheckBox::indicator:checked {
+	image: url(./theme/White/checkBoxChecked.png);
+}
+QCheckBox::indicator:checked:hover {
+	image: url(./theme/White/checkBoxCheckedHover.png);
+}
+QCheckBox::indicator:checked:pressed {
+	image: url(./theme/White/checkBoxCheckedPressed.png);
+}
+QCheckBox::indicator:indeterminate {
+	image: url(./theme/White/checkBoxIndeterminate.png);
+}
+QCheckBox::indicator:indeterminate:hover {
+	image: url(./theme/White/checkBoxIndeterminateHover.png);
+}
+QCheckBox::indicator:indeterminate:pressed {
+	image: url(./theme/White/checkBoxIndeterminatePressed.png);
+}
+
+/**********页签项**********/
+QTabWidget::pane {
+	border: none;
+	border-top: 1px solid rgb(57, 197, 187);
+	background: rgb(240, 241, 245);
+}
+QTabWidget::tab-bar {
+	border: none;
+}
+QTabBar::tab {
+    border: none;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    color: rgb(56, 99, 154);
+    background: rgba(100, 220, 220, 90);
+    height: 23px;
+    /*min-width: 50px;*/
+    margin-right: 1px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+QTabBar::tab:hover {
+	background: rgb(57, 197, 187);
+}
+QTabBar::tab:selected {
+	color: white;
+	background: rgb(57, 197, 187);
+}
+
+/**********表格**********/
+QTableView {
+        border: 1px solid rgb(57, 197, 187);
+        background: rgb(245, 251, 255);
+        gridline-color: rgb(57, 197, 187);
+        color: rgb(33, 33, 33);
+        qproperty-editTriggers: NoEditTriggers;
+}
+QTableView::item {
+        padding-left: 0px;
+        padding-right: 0px;
+        border: none;
+        background: white;
+        border-right: 1px solid rgb(57, 197, 187);
+        border-bottom: 1px solid rgb(57, 197, 187);
+}
+QTableView::item:selected {
+        background: rgba(100, 200, 200, 100);
+        color: rgb(0, 0, 0);
+}
+QTableView::item:selected:!active {
+        color: rgb(65, 65, 65);
+}
+QTableView::indicator {
+        width: 20px;
+        height: 20px;
+}
+QTableView::indicator:enabled:unchecked {
+        image: url(./theme/White/checkBox.png);
+}
+QTableView::indicator:enabled:unchecked:hover {
+        image: url(./theme/White/checkBoxHover.png);
+}
+QTableView::indicator:enabled:unchecked:pressed {
+        image: url(./theme/White/checkBoxPressed.png);
+}
+QTableView::indicator:enabled:checked {
+        image: url(./theme/White/checkBoxChecked.png);
+}
+QTableView::indicator:enabled:checked:hover {
+        image: url(./theme/White/checkBoxCheckedHover.png);
+}
+QTableView::indicator:enabled:checked:pressed {
+        image: url(./theme/White/checkBoxCheckedPressed.png);
+}
+QTableView::indicator:enabled:indeterminate {
+        image: url(./theme/White/checkBoxIndeterminate.png);
+}
+QTableView::indicator:enabled:indeterminate:hover {
+        image: url(./theme/White/checkBoxIndeterminateHover.png);
+}
+QTableView::indicator:enabled:indeterminate:pressed {
+        image: url(./theme/White/checkBoxIndeterminatePressed.png);
+}
+
+/**********滚动条-垂直**********/
+QScrollBar:vertical {
+        width: 10px;
+        background: transparent;
+        margin-left: 0px;
+        margin-right: 0px;
+}
+QScrollBar::handle:vertical {
+        min-height: 30px;
+        background: rgb(100, 220, 220);
+        margin-top: 12px;
+        margin-bottom: 12px;
+        border:1px solid transparent;
+        border-radius:5px;
+}
+QScrollBar::handle:vertical:hover {
+        background: rgb(57, 197, 187);
+}
+QScrollBar::sub-line:vertical {
+        height: 15px;
+        background: transparent;
+        image: url(./theme/white/topArrow.png);
+        subcontrol-position: top;
+}
+QScrollBar::add-line:vertical {
+        height: 15px;
+        background: transparent;
+        image: url(./theme/white/bottomArrow.png);
+        subcontrol-position: bottom;
+}
+QScrollBar::sub-line:vertical:hover {
+        background: rgb(100, 220, 220);
+}
+QScrollBar::add-line:vertical:hover {
+        background: rgb(100, 220, 220);
+}
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+        background: transparent;
+}
+
+/**********输入框**********/
+QLineEdit {
+        border-radius: 4px;
+        height: 20px;
+        border: 1px solid rgb(57, 197, 187);
+        background: white;
+        font: bold;
+        color: rgb(254, 67, 101);
+}
+QLineEdit:enabled {
+        /*color: rgb(84, 84, 84);*/
+}
+QLineEdit:enabled:hover, QLineEdit:enabled:focus {
+        color: rgb(33, 33, 33);
+        font: normal;
+}
+QLineEdit:!enabled {
+        color: rgb(80, 80, 80);
+}
+
+/**********文本编辑框**********/
+QTextEdit#updataContentTextEdit {
+    border: 1px solid rgb(57, 197, 187);
+    color: rgb(66, 66, 66);
+    background: rgb(245, 250, 255);
+}

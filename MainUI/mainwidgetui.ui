@@ -1,0 +1,1287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWidgetUI</class>
+ <widget class="QWidget" name="MainWidgetUI">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>670</width>
+    <height>700</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWidget</string>
+  </property>
+  <widget class="QLabel" name="label_title">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>5</y>
+     <width>500</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>微软雅黑</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="lineWidth">
+    <number>0</number>
+   </property>
+   <property name="text">
+    <string>屏MIPI倍频信道风险预估简易工具</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="textInteractionFlags">
+    <set>Qt::NoTextInteraction</set>
+   </property>
+  </widget>
+  <widget class="QGroupBox" name="BaseSettings">
+   <property name="geometry">
+    <rect>
+     <x>5</x>
+     <y>35</y>
+     <width>660</width>
+     <height>140</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="title">
+    <string>基本参数设置</string>
+   </property>
+   <widget class="QLineEdit" name="CLK_Risks_Value">
+    <property name="geometry">
+     <rect>
+      <x>395</x>
+      <y>110</y>
+      <width>50</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CLK_Risks_unit">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>110</y>
+      <width>30</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>MHz</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Scree_label_Show">
+    <property name="geometry">
+     <rect>
+      <x>18</x>
+      <y>50</y>
+      <width>290</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>屏单个点传送的字节数=3个像素点x8Bits =</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="MIPI_label_CLK">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>110</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>MIPI(BitCLK):</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CLK_ExistRisk_unit">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>80</y>
+      <width>30</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>MHz</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CLK_Risks_label_Show">
+    <property name="geometry">
+     <rect>
+      <x>18</x>
+      <y>110</y>
+      <width>375</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>频谱仪扫描关/开展频风险倍频干扰带宽范围(Delta) =</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="MIPI_CLK_Unit">
+    <property name="geometry">
+     <rect>
+      <x>185</x>
+      <y>20</y>
+      <width>30</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>MHz</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CLK_ExistRisks_label_Show">
+    <property name="geometry">
+     <rect>
+      <x>18</x>
+      <y>80</y>
+      <width>375</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>频谱仪扫描关/开展频存在倍频干扰带宽范围(Delta) =</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Screen_Bits_Value">
+    <property name="geometry">
+     <rect>
+      <x>315</x>
+      <y>50</y>
+      <width>80</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="MIPI_CLK_Value">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>20</y>
+      <width>50</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Vmipi_label_Show">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>50</y>
+      <width>160</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Vmipi = Bitclk/24 =</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Vmipi_CLK_Value">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>50</y>
+      <width>80</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="CLK_ExistRisks_Value">
+    <property name="geometry">
+     <rect>
+      <x>395</x>
+      <y>80</y>
+      <width>50</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="RF_Calculator">
+    <property name="geometry">
+     <rect>
+      <x>520</x>
+      <y>90</y>
+      <width>80</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>计算</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="RF_BandInfo">
+   <property name="geometry">
+    <rect>
+     <x>5</x>
+     <y>180</y>
+     <width>210</width>
+     <height>513</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="title">
+    <string>射频测试频段</string>
+   </property>
+   <widget class="QCheckBox" name="FDD_B8_Ck">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>25</y>
+      <width>90</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>FDD B8</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="GSM850_Ck">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>25</y>
+      <width>90</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>GSM850</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="GSM900_Ck">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>48</y>
+      <width>90</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>GSM900</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="DCS1800_Ck">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>71</y>
+      <width>90</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>DCS1800</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="WCDMA_B1_Ck">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>117</y>
+      <width>90</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>WCDMA B1</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="PCS1900_Ck">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>94</y>
+      <width>90</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>PCS1900</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="WCDMA_B2_Ck">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>140</y>
+      <width>90</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>WCDMA B2</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="WCDMA_B4_Ck">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>186</y>
+      <width>90</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>WCDMA B4</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="WCDMA_B3_Ck">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>163</y>
+      <width>90</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>WCDMA B3</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="WCDMA_B5_Ck">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>209</y>
+      <width>90</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>WCDMA B5</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="TDSCMDA_B34_Ck">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>255</y>
+      <width>90</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>TDSCDMA B34</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="WCDMA_B8_Ck">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>232</y>
+      <width>90</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>WCDMA B8</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="TDSCMDA_B39_Ck">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>278</y>
+      <width>90</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>TDSCDMA B39</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="CDMA_BC1_Ck">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>324</y>
+      <width>90</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>CDMA BC1</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="CDMA_BC0_Ck">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>301</y>
+      <width>90</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>CDMA BC0</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="CDMA_BC10_Ck">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>347</y>
+      <width>90</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>CDMA BC10</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="FDD_B2_Ck">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>393</y>
+      <width>90</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>FDD B2</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="FDD_B1_Ck">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>370</y>
+      <width>90</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>FDD B1</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="FDD_B3_Ck">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>416</y>
+      <width>90</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>FDD B3</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="FDD_B5_Ck">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>462</y>
+      <width>90</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>FDD B5</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="FDD_B4_Ck">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>439</y>
+      <width>90</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>FDD B4</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="FDD_B7_Ck">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>485</y>
+      <width>90</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>FDD B7</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="FDD_B17_Ck">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>94</y>
+      <width>90</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>FDD B17</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="FDD_B20_Ck">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>117</y>
+      <width>90</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>FDD B20</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="FDD_B26_Ck">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>163</y>
+      <width>90</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>FDD B26</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="FDD_B12_Ck">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>48</y>
+      <width>90</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>FDD B12</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="FDD_B13_Ck">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>71</y>
+      <width>90</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>FDD B13</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="FDD_B25_Ck">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>140</y>
+      <width>90</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>FDD B25</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="GPS_Ck">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>324</y>
+      <width>90</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>GPS</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="TDD_B42_Ck">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>301</y>
+      <width>90</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>TDD B42</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="TDD_B38_Ck">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>209</y>
+      <width>90</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>TDD B38</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="FDD_B28_Ck">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>186</y>
+      <width>90</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>FDD B28</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="TDD_B39_Ck">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>232</y>
+      <width>90</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>TDD B39</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="TDD_B40_Ck">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>255</y>
+      <width>90</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>TDD B40</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="TDD_B41_Ck">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>278</y>
+      <width>90</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>TDD B41</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="WIFI24G_11N_Ck">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>393</y>
+      <width>90</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>WIFI2.4G 11N</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="WIFI5G_11N_Ck">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>439</y>
+      <width>90</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>WIFI5G 11N</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="WIFI5G_11A_Ck">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>416</y>
+      <width>90</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>WIFI5G 11A</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="WIFI24G_11G_Ck">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>370</y>
+      <width>90</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>WIFI2.4G 11G</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="WIFI24G_11B_Ck">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>347</y>
+      <width>90</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>WIFI2.4G 11B</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="WIFI5G_11AC_Ck">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>462</y>
+      <width>90</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>WIFI5G 11AC</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="RF_Desense_Report">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>180</y>
+     <width>445</width>
+     <height>513</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="title">
+    <string>干扰测试数据</string>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <property name="spacing">
+     <number>2</number>
+    </property>
+    <property name="leftMargin">
+     <number>2</number>
+    </property>
+    <property name="topMargin">
+     <number>5</number>
+    </property>
+    <property name="rightMargin">
+     <number>2</number>
+    </property>
+    <property name="bottomMargin">
+     <number>2</number>
+    </property>
+    <item>
+     <widget class="QTabWidget" name="RFTabShowWidget">
+      <property name="font">
+       <font>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="currentIndex">
+       <number>5</number>
+      </property>
+      <widget class="QWidget" name="GSM_Report">
+       <attribute name="title">
+        <string>GSM</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <property name="spacing">
+         <number>2</number>
+        </property>
+        <property name="leftMargin">
+         <number>2</number>
+        </property>
+        <property name="topMargin">
+         <number>2</number>
+        </property>
+        <property name="rightMargin">
+         <number>2</number>
+        </property>
+        <property name="bottomMargin">
+         <number>2</number>
+        </property>
+        <item>
+         <widget class="QTableWidget" name="GSMTable">
+          <attribute name="horizontalHeaderVisible">
+           <bool>false</bool>
+          </attribute>
+          <attribute name="verticalHeaderVisible">
+           <bool>false</bool>
+          </attribute>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="WCDMA_Report">
+       <attribute name="title">
+        <string>WCDMA</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <property name="spacing">
+         <number>2</number>
+        </property>
+        <property name="leftMargin">
+         <number>2</number>
+        </property>
+        <property name="topMargin">
+         <number>2</number>
+        </property>
+        <property name="rightMargin">
+         <number>2</number>
+        </property>
+        <property name="bottomMargin">
+         <number>2</number>
+        </property>
+        <item>
+         <widget class="QTableWidget" name="UTMSTable"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="TDS_CDMA_Report">
+       <attribute name="title">
+        <string>TDSCDMA\CDMA</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_4">
+        <property name="spacing">
+         <number>2</number>
+        </property>
+        <property name="leftMargin">
+         <number>2</number>
+        </property>
+        <property name="topMargin">
+         <number>2</number>
+        </property>
+        <property name="rightMargin">
+         <number>2</number>
+        </property>
+        <property name="bottomMargin">
+         <number>2</number>
+        </property>
+        <item>
+         <widget class="QTableWidget" name="TDS_CDMATable"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="LTE_Report">
+       <attribute name="title">
+        <string>LTE</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_7">
+        <property name="spacing">
+         <number>2</number>
+        </property>
+        <property name="leftMargin">
+         <number>2</number>
+        </property>
+        <property name="topMargin">
+         <number>2</number>
+        </property>
+        <property name="rightMargin">
+         <number>2</number>
+        </property>
+        <property name="bottomMargin">
+         <number>2</number>
+        </property>
+        <item>
+         <widget class="QTableWidget" name="LTETable"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="WIFI_GPS_Report">
+       <attribute name="title">
+        <string>WIFI\GPS</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_6">
+        <property name="spacing">
+         <number>2</number>
+        </property>
+        <property name="leftMargin">
+         <number>2</number>
+        </property>
+        <property name="topMargin">
+         <number>2</number>
+        </property>
+        <property name="rightMargin">
+         <number>2</number>
+        </property>
+        <property name="bottomMargin">
+         <number>2</number>
+        </property>
+        <item>
+         <widget class="QTableWidget" name="WIFIGPSTable"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="SumData_Report">
+       <attribute name="title">
+        <string>统计</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_5">
+        <property name="spacing">
+         <number>2</number>
+        </property>
+        <property name="leftMargin">
+         <number>2</number>
+        </property>
+        <property name="topMargin">
+         <number>2</number>
+        </property>
+        <property name="rightMargin">
+         <number>2</number>
+        </property>
+        <property name="bottomMargin">
+         <number>2</number>
+        </property>
+        <item>
+         <widget class="QTableWidget" name="SUMDataTable"/>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
